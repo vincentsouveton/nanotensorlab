@@ -1,0 +1,16 @@
+generator: gaussian
+
+params:
+  dim: 2
+  mean: 0.0
+  std: 1.0
+
+sampling:
+  n_samples: 10000
+
+split:
+  train: 0.8
+  val: 0.1
+  test: 0.1
+
+seed: 42

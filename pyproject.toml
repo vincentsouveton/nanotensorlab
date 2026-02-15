@@ -1,0 +1,46 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "nanotensorlab"
+version = "0.1.0"
+description = "nanotensorlab: a minimalist lab for neural sampling and regression."
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+authors = [
+    {name = "Vincent Souveton"}
+]
+keywords = ["machine learning", "neural networks", "generative models", "sampling", "regression"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent"
+]
+
+dependencies = [
+    "torch",
+    "numpy<2",
+    "pyyaml",
+    "matplotlib",
+    "tqdm"
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["nanotensorlab*"]
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "black",
+    "flake8"
+]
+
+[tool.setuptools.package-data]
+nanotensorlab = ["py.typed"]
+
+[project.scripts]
+ntl-train = "nanotensorlab.cli.train:main"
+ntl-eval = "nanotensorlab.cli.evaluate:main"

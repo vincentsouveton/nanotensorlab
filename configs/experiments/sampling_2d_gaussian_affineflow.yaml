@@ -1,0 +1,3 @@
+data: configs/data/gaussian_2d.yaml
+model: configs/models/samplers/affine_flow_2d.yaml
+training: configs/training/default.yaml
