@@ -50,15 +50,59 @@ Synthetic datasets with analytical ground truth:
 
 ## 🚀 Installation
 
-Clone the project and create a virtual environment to run it:
+### 1️⃣ Clone the repository
 
 ```bash
 git clone https://github.com/vincentsouveton/nanotensorlab.git
-cd NanoTensorLab
-python3 -m venv venv
-source venv/bin/activate
-pip install --upgrade pip setuptools wheel
+cd nanotensorlab
+```
+
+---
+
+### 2️⃣ Create a virtual environment (recommended)
+
+#### macOS / Linux
+
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+```
+
+#### Windows (PowerShell)
+
+```powershell
+python -m venv .venv
+.venv\Scripts\activate
+```
+
+---
+
+### 3️⃣ Upgrade pip
+
+```bash
+pip install --upgrade pip
+```
+
+---
+
+### 4️⃣ Install NanoTensorLab in editable mode
+
+```bash
 pip install -e .
+```
+
+---
+
+## ⚙️ Running an Experiment
+
+```bash
+python scripts/train.py --config configs/XXX.yaml
+```
+
+Best and last model checkpoints are automatically saved inside:
+
+```
+outputs/
 ```
 
 ---
@@ -71,16 +115,16 @@ please cite it as follows:
 ### BibTeX
 ```bibtex
 @software{nanotensorlab,
-  title  = {NanoTensorLab: An Educational Neural Modeling Framework},
+  title  = {nanotensorlab: A minimalist lab for neural sampling and regression},
   author = {{Vincent Souveton}},
   year   = {2026},
-  url    = {https://github.com/vincentsouveton/NanoTensorLab}
+  url    = {https://github.com/vincentsouveton/nanotensorlab}
 }
 ```
 
 You may also cite it in plain text as:
 
-> NanoTensorLab, an open-source educational framework for neural modeling.
+> nanotensorlab, an open-source educational framework for neural modeling.
 
 ---
 
