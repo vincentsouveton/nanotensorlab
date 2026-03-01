@@ -1,4 +1,0 @@
-model: affine_flow
-
-params:
-  dim: 2
