@@ -13,7 +13,7 @@ def build_model(config: dict):
     Build a model from config.
     """
 
-    model_name = config["model"].lower()
+    model_name = config["name"].lower()
 
     if model_name not in MODEL_REGISTRY:
         raise ValueError(

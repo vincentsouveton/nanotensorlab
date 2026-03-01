@@ -36,9 +36,12 @@ def main():
 
     experiment_config = load_yaml(args.config)
 
-    data_config = load_yaml(experiment_config["data"])
-    model_config = load_yaml(experiment_config["model"])
-    training_config = load_yaml(experiment_config["training"])
+    #data_config = load_yaml(experiment_config["data"])
+    #model_config = load_yaml(experiment_config["model"])
+    #training_config = load_yaml(experiment_config["training"])
+    data_config = experiment_config["data"]
+    model_config = experiment_config["model"]
+    training_config = experiment_config["training"]
 
     # --------------------------------------------------
     # Build dataset & model
@@ -58,7 +61,7 @@ def main():
     # Save experiment config for reproducibility
     torch.save(
         {"experiment_config": experiment_config},
-        os.path.join(output_dir, "experiment_config.pt"),
+        os.path.join(output_dir, "experiment_config.pth"),
     )
 
     # --------------------------------------------------

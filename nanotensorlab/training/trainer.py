@@ -39,19 +39,19 @@ class Trainer:
         # Optimizer
         self.optimizer = torch.optim.Adam(
             self.model.parameters(),
-            lr=self.config["training"]["lr"],
+            lr=self.config["lr"],
         )
 
         # DataLoaders
         self.train_loader = DataLoader(
             self.train_dataset,
-            batch_size=self.config["training"]["batch_size"],
+            batch_size=self.config["batch_size"],
             shuffle=True,
         )
 
         self.val_loader = DataLoader(
             self.val_dataset,
-            batch_size=self.config["training"]["batch_size"],
+            batch_size=self.config["batch_size"],
             shuffle=False,
         )
 
@@ -99,13 +99,13 @@ class Trainer:
     def fit(self):
         best_val_loss = float("inf")
 
-        for epoch in range(self.config["training"]["epochs"]):
+        for epoch in range(self.config["epochs"]):
 
             train_loss = self.train_one_epoch()
             val_loss = self.evaluate()
 
             print(
-                f"[Epoch {epoch+1}/{self.config['training']['epochs']}] "
+                f"[Epoch {epoch+1}/{self.config['epochs']}] "
                 f"Train Loss: {train_loss:.4f} | "
                 f"Val Loss: {val_loss:.4f}"
                 )

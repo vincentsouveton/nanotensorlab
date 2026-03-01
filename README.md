@@ -31,7 +31,6 @@ Synthetic datasets with analytical ground truth:
 ### Models
 - Generative models
 - Regression (meta)models
-- Classification models
 
 ### Training & Evaluation
 - Modular training loops
@@ -109,7 +108,7 @@ outputs/
 
 ## 📌 How to Cite
 
-If you use **NanoTensorLab** in academic work, research, or teaching material,
+If you use **nanotensorlab** in academic work, research, or teaching material,
 please cite it as follows:
 
 ### BibTeX
