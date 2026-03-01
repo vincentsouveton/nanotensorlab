@@ -95,12 +95,13 @@ pip install -e .
 ## ⚙️ Running an Experiment
 
 The project is experiment-oriented, meaning that playing with a model always follows
-the same philosohpy: create data, define a model and train the model on the data.
-Once these steps are completed, one may evaluate the model and visualize the results.
+the same philosophy: (i) generate training/validation/test data, (ii) instantiate a
+neural model and (iii) train the model on the data. Once these steps are completed,
+one may evaluate the model and visualize the results.
 
 The crucial part is to create a configuration file for each experiment. A configuration
 file is a .yaml file containing meta-information about the data, the model and the
-training steps. Basic examples configurations are included in the [configs](configs/)
+training steps. Basic example configurations are included in the [configs/](configs/)
 folder.
 
 Once the `XXX.yaml` file is saved, one may run the corresponding experiment:
@@ -116,9 +117,9 @@ Best and last model checkpoints are automatically saved inside:
 outputs/
 ```
 
-And that's it! Note that one does not need to modify the code for running an experiment.
+And that's it! Note that one does not need to code anything for running an experiment.
 However, the modular structure of the project makes it very easy to change the existing
-data or models generators or even to create new generators from scratch.
+data/models generators or even to create new generators from scratch.
 
 ---
 
