@@ -8,7 +8,7 @@ designed to experiment with modern neural models for:
 
 The project focuses on **simple synthetic datasets (1D, 2D, 3D)** to make
 advanced machine learning concepts easy to understand, visualize, and extend. You
-can read our [Manifesto](Manifesto.md).
+can read our [Manifesto](MANIFESTO.md).
 
 ---
 
@@ -145,4 +145,4 @@ You may also cite it in plain text as:
 ## 📜 License
 
 This project is released under the **MIT License**.
-See the `LICENSE` file for details.
+See the [License](LICENSE) file for details.
