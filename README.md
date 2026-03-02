@@ -7,7 +7,8 @@ designed to experiment with modern neural models for:
 - **Regression**
 
 The project focuses on **simple synthetic datasets (1D, 2D, 3D)** to make
-advanced machine learning concepts easy to understand, visualize, and extend.
+advanced machine learning concepts easy to understand, visualize, and extend. You
+can read our [Manifesto](Manifesto.md).
 
 ---
 
@@ -107,15 +108,12 @@ folder.
 Once the `XXX.yaml` file is saved, one may run the corresponding experiment:
 
 ```bash
+cd nanotensorlab # if not already at the root of the project
 source venv/bin/activate
 python scripts/train.py --config configs/XXX.yaml
 ```
 
-Best and last model checkpoints are automatically saved inside:
-
-```
-outputs/
-```
+Best and last model checkpoints are automatically saved inside `outputs/XXX/`.
 
 And that's it! Note that one does not need to code anything for running an experiment.
 However, the modular structure of the project makes it very easy to change the existing
